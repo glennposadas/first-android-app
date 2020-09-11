@@ -8,6 +8,6 @@ interface APIService {
 
 //    "https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=wat"
 
-    @escaping
+    //@escaping
     suspend fun defineTerm(term: String): DefineTermResponse
 }
