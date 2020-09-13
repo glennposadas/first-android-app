@@ -1,5 +1,8 @@
 package com.glennposadas.urbandicsample
 
+import retrofit2.http.GET
+import retrofit2.http.Query
+
 interface APIService {
 //    let headers = [
 ////    "x-rapidapi-host": "mashape-community-urban-dictionary.p.rapidapi.com",
@@ -9,5 +12,10 @@ interface APIService {
 //    "https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=wat"
 
     //@escaping
-    suspend fun defineTerm(term: String): DefineTermResponse
+
+    @GET("define")
+    suspend fun defineTerm(
+        @Query("term")
+        term: String
+    ): DefineTermResponse
 }

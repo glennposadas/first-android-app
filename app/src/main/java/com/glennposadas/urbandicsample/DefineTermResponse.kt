@@ -1,6 +1,9 @@
 package com.glennposadas.urbandicsample
 
-// struct
-data class DefineTermResponse(val terms: List<Term>) {
+import com.google.gson.annotations.SerializedName
 
-}
+// struct
+data class DefineTermResponse(
+    @SerializedName("list")
+    val terms: List<Term>
+)
